@@ -1,17 +1,16 @@
 #include "Savanna.h"
+#include <string>
 #include <iostream>
 using namespace std;
-string one="Zebra";
-string two="Hyena";
-string three="Cheetah";
-int Savanna::currentID=0;
+char SanimArr[3][10]={"Zebra","Hyena","Cheetah"};
+int Savanna::ScurrentID=1;
 
 Savanna::Savanna(){
 }
 
-Savanna::Savanna(string SavAnim){
+Savanna::Savanna(std::string SavAnim){
 sAnim=SavAnim;
-id=currentID++;
+id=ScurrentID++;
 }
 
 int Savanna::get_rarity(){
@@ -22,11 +21,11 @@ return randNum;
 
 string Savanna::get_animal(int rarity){
 switch (rarity){
-case 1: return one;
+case 1: return SanimArr[0];
 break;
-case 2: return two;
+case 2: return SanimArr[1];
 break;
-case 3: return three;
+case 3: return SanimArr[2];
 break;
 }
 }
