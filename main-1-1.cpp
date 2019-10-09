@@ -7,7 +7,7 @@ int choice;
 cout<<"Enter a number to choose terrain:"<<endl;
 cout<<"1 = Savanna, 2 = Mountain, 3 = Jungle"<<endl;
 cin>>choice;
-
+//depending on choice, a certain terrain will be chosen.
 switch (choice){
 case(1):
 Savanna* one=new Savanna("?");
